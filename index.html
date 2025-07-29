@@ -8,11 +8,6 @@
     <input id="in" type="text">
     <button type="button" onclick="sub()">submit</button>
       <script>
-    var npm = require('crypto-js');
-    function sub() {
-      const encryptedText = CryptoJS.AES.encrypt(in.value, "wsxdecrftgtgyhujixevbn").toString();
-      console.log(encryptedText);
-    }
     /*let connection = new WebSocket("wss://ws.postman-echo.com/raw");
     function sub() {
        connection.send('{"message":"'+in.value+'"}');
