@@ -4,9 +4,13 @@
     <title>Testing it</title>
   </head>
   <body>
-    <input type="text">
+    <input id="in" type="text">
+    <button onclick="sub"></button>
   </body>
   <script>
-    
+    let connection = new WebSocket("wss://ws.postman-echo.com/raw");
+    function sub() {
+       connection.send('{"message":"Welcome to Sandy!"}');
+    }
   </script>
 </html>
