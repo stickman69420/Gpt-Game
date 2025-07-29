@@ -9,6 +9,7 @@
   </body>
   <script>
     var npm = require('crypto-js');
+    const encryptedText = CryptoJS.AES.encrypt(in.value, "wsxdecrftgtgyhujixevbn").toString();
     /*let connection = new WebSocket("wss://ws.postman-echo.com/raw");
     function sub() {
        connection.send('{"message":"'+in.value+'"}');
