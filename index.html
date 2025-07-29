@@ -10,7 +10,7 @@
   <script>
     let connection = new WebSocket("wss://ws.postman-echo.com/raw");
     function sub() {
-       connection.send('{"message":"Welcome to Sandy!"}');
+       connection.send('{"message":"'+in.value+'"}');
     }
   </script>
 </html>
