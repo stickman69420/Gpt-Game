@@ -18,4 +18,6 @@ function sub(){
     inpvp += 9-inpv[i]
     inpvp += inpv[i]
   }
+  inpvp = inpvp.slice(0,3)+"."+inpvp.slice(3,6)+"."+inpvp.slice(6,7)+"."+inpvp.slice(7)
+  console.log(inpvp)
 }
