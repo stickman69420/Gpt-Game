@@ -6,6 +6,7 @@ function sub() {
     Iprocess += 9-(Ip[i+1])
     Iprocess += Math.floor(Math.random()*10)
     Iprocess += Ip[i]
+    Iprocess += Math.floor(Math.random()*10)
   }
   console.log(Iprocess);
 }
