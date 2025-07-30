@@ -7,7 +7,7 @@ GetIp().then(ip => {
   document.getElementById("out").innerHTML = ip;
 });*/
 function getIP(json) {
-    document.getElementById("out").innerHTML = ("My public IP address is: ", json.ip);
+    document.getElementById("out").innerHTML = "My public IP address is: " + json.ip;
   }
 /*function sub() {
   console.log(CryptoJS.AES.encrypt(document.getelementbyid("in").value, "jsjjsjsidjusiskjsigooakwoockzopwlsoosspkgjbvkskj83"))
