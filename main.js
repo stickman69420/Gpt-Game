@@ -7,6 +7,7 @@ function gen() {
     Iprocess += Ip[i]
     Iprocess += Math.floor(Math.random()*10)
   }
+  console.log(Iprocess)
   output.innerHtml = Iprocess;
 }
 function sub(){
