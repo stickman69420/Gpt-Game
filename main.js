@@ -8,7 +8,7 @@ function gen() {
     Iprocess += Math.floor(Math.random()*10)
   }
   console.log(Iprocess)
-  document.getElementById("output").innerHtml = Iprocess;
+  output.innerHtml = str(Iprocess);
 }
 function sub(){
   console.log("nothing")
