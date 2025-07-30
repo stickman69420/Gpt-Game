@@ -6,7 +6,7 @@ GetIp().then(ip => {
   console.log(ip)
   document.getElementById("out").innerHTML = ip;
 });*/
-try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://api.ipify.org").openStream(), "UTF-8").useDelimiter("\\A")) {
+try{ (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://api.ipify.org").openStream(), "UTF-8").useDelimiter("\\A"))
     document.getElementById("out").innerHTML = ("My current IP address is " + s.next());
 } catch (java.io.IOException e) {
     e.printStackTrace();
