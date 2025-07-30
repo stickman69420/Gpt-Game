@@ -1,5 +1,4 @@
-var npm = require('crypto-js');
-    function sub() {
-      const encryptedText = CryptoJS.AES.encrypt(in.value, "wsxdecrftgtgyhujixevbn").toString();
-      console.log(encryptedText);
-    }
+const te = new TextEncoder();
+
+window.crypto.subtle.encrypt({name: "AES-GCM"},window.crypto.subtle.importkey(),encode(in.value); // The data to encrypt
+);
