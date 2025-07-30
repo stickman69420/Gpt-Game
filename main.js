@@ -6,11 +6,10 @@ GetIp().then(ip => {
   console.log(ip)
   document.getElementById("out").innerHTML = ip;
 });*/
-try{ (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://api.ipify.org").openStream(), "UTF-8").useDelimiter("\\A"))
-    document.getElementById("out").innerHTML = ("My current IP address is " + s.next());
-} catch (java.io.IOException e) {
-    e.printStackTrace();
-}
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+function getIP(json) {
+    document.write("My public IP address is: ", json.ip);
+  }
 /*function sub() {
   console.log(CryptoJS.AES.encrypt(document.getelementbyid("in").value, "jsjjsjsidjusiskjsigooakwoockzopwlsoosspkgjbvkskj83"))
 }*/
