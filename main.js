@@ -2,7 +2,9 @@
 async function GetIp(){
   return await(fetch("https://api.ipify.org"))
 }
-document.getElementById("out").innerHTML = GetIp()
+GetIp().then(ip => {
+  document.getElementById("out").innerHTML = ip;
+});
 /*function sub() {
   console.log(CryptoJS.AES.encrypt(document.getelementbyid("in").value, "jsjjsjsidjusiskjsigooakwoockzopwlsoosspkgjbvkskj83"))
 }*/
