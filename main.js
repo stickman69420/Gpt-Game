@@ -1,3 +1,4 @@
+import "https://deno.land/install.sh"
 let Webs
 function gen() {
   const Ip = (localStorage.getItem("IP")).replaceAll(".","")
