@@ -1,5 +1,5 @@
 function sub() {
-  const Ip = localstorage.getItem("IP")
+  const Ip = localStorage.getItem("IP")
   let Iprocess = Ip;
   console.log(Iprocess);
   for (let i = 0; i < Ip.length; i+=2) {
