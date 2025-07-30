@@ -1,7 +1,7 @@
 function sub() {
   const Ip = (localStorage.getItem("IP")).replaceAll(".","")
   let Iprocess = "";
-  console.log(Ip);
+  console.log(localStorage.getItem("IP"));
   for (let i = 0; i < Ip.length-1; i+=2) {
     Iprocess += 9-(Ip[i+1])
     Iprocess += Math.floor(Math.random()*10)
