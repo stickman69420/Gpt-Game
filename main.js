@@ -26,6 +26,6 @@ WebS.onopen = function(event) {
     WebS.send("Are we... Connected?")
     WebS.addEventListener("message", (event) => {
   document.write(event.data);
-}
 })
+}
 }
