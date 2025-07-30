@@ -1,8 +1,9 @@
 //let CryptoJS = (import("https://github.com/brix/crypto-js"));
 async function GetIp(){
-  return await(fetch("https://api.ipify.org")).text()
+  return await(fetch("https://api.ipify.org"))
 }
 GetIp().then(ip => {
+  console.log(ip)
   document.getElementById("out").innerHTML = ip;
 });
 /*function sub() {
