@@ -8,6 +8,8 @@ function gen() {
     Iprocess += Ip[i]
     Iprocess += Math.floor(Math.random()*10)
   }
+  Iprocess += Ip[Ip.length-1]
+  Iprocess += Math.floor(Math.random()*10)
   console.log(Iprocess);
   output.innerHTML = Iprocess;
 }
