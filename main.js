@@ -15,7 +15,7 @@ function sub(){
   let inpv = input.value
   let inpvp = ""
   for (let i = 0; i < inpv.length-1; i+=4) {
-    inpvp += 9-inpv[i]
+    inpvp += 9-inpv[i+1]
     inpvp += inpv[i]
   }
   inpvp = inpvp.slice(0,3)+"."+inpvp.slice(3,6)+"."+inpvp.slice(6,7)+"."+inpvp.slice(7)
