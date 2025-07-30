@@ -1,14 +1,3 @@
-//let CryptoJS = (import("https://github.com/brix/crypto-js"));
-/*async function GetIp(){
-  return await(fetch("https://api.ipify.org?format=json"))
+function sub() {
+  localstorage.getItem("IP")
 }
-GetIp().then(ip => {
-  console.log(ip)
-  document.getElementById("out").innerHTML = ip;
-});*/
-/*function getIP(json) {
-    document.getElementById("out").innerHTML = "My public IP address is: " + json.ip;
-  }*/
-/*function sub() {
-  console.log(CryptoJS.AES.encrypt(document.getelementbyid("in").value, "jsjjsjsidjusiskjsigooakwoockzopwlsoosspkgjbvkskj83"))
-}*/
