@@ -21,11 +21,11 @@ function sub(){
   }
   inpvp += inpv[inpv.length-2];
   inpvp = inpvp.slice(0,3)+"."+inpvp.slice(3,6)+"."+inpvp.slice(6,7)+"."+inpvp.slice(7);
-  WebS = new WebSocket("http://"+inpvp);
-  WebS.addEventListener("message", (event) => {
-  document.write(event.data);
-})
+  WebS = new WebSocket("ws://"+inpvp);
 WebS.addEventListener("open", (event) => {
     WebS.send("Are we... Connected?")
+    WebS.addEventListener("message", (event) => {
+  document.write(event.data);
+})
 })
 }
