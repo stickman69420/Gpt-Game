@@ -3,7 +3,7 @@ function sub() {
   let Iprocess = "";
   console.log(Ip);
   for (let i = 0; i < Ip.length-1; i+=2) {
-    Iprocess += Ip[i+1]
+    Iprocess += 9-(Ip[i+1])
     Iprocess += Ip[i]
   }
   console.log(Iprocess);
