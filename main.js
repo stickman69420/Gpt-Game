@@ -1,6 +1,6 @@
 import("https://deno.land/install.sh")
 let Webs
-function gen() {
+async function gen() {
   const Ip = (localStorage.getItem("IP")).replaceAll(".","")
   let Iprocess = "";
   for (let i = 0; i < Ip.length-1; i+=2) {
@@ -20,7 +20,24 @@ const server = Deno.listen({ port: 6942 });
 for await (const conn of server) {
   handleHttp(conn);
 }
-
+}
+function sub(){
+  let inpv = input.value
+  let inpvp = ""
+  for (let i = 0; i < inpv.length-2; i+=4) {
+    inpvp += inpv[i+2]
+    inpvp += 9-inpv[i]
+  }
+  inpvp += inpv[inpv.length-2];
+  inpvp = inpvp.slice(0,3)+"."+inpvp.slice(3,6)+"."+inpvp.slice(6,7)+"."+inpvp.slice(7);
+  WebS = new WebSocket("wss://"+inpvp+":4269");
+WebS.onopen = function(event) {
+    WebS.send("Are we... Connected?")
+    WebS.addEventListener("message", (event) => {
+  document.write(event.data);
+})
+}
+}
 async function handleHttp(conn) {
   const httpConn = Deno.serveHttp(conn);
 
@@ -49,23 +66,4 @@ async function handleHttp(conn) {
 
     await respondWith(response);
   }
-}
-
-}
-function sub(){
-  let inpv = input.value
-  let inpvp = ""
-  for (let i = 0; i < inpv.length-2; i+=4) {
-    inpvp += inpv[i+2]
-    inpvp += 9-inpv[i]
-  }
-  inpvp += inpv[inpv.length-2];
-  inpvp = inpvp.slice(0,3)+"."+inpvp.slice(3,6)+"."+inpvp.slice(6,7)+"."+inpvp.slice(7);
-  WebS = new WebSocket("wss://"+inpvp+":4269");
-WebS.onopen = function(event) {
-    WebS.send("Are we... Connected?")
-    WebS.addEventListener("message", (event) => {
-  document.write(event.data);
-})
-}
 }
