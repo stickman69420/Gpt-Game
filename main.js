@@ -61,7 +61,7 @@ function sub(){
   }
   inpvp += inpv[inpv.length-2];
   inpvp = inpvp.slice(0,3)+"."+inpvp.slice(3,6)+"."+inpvp.slice(6,7)+"."+inpvp.slice(7);
-  WebS = new WebSocket("wss://"+inpvp);
+  WebS = new WebSocket("wss://"+inpvp+":4269");
 WebS.onopen = function(event) {
     WebS.send("Are we... Connected?")
     WebS.addEventListener("message", (event) => {
